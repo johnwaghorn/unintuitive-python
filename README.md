@@ -1,3 +1,4 @@
 # unintuitive-python
 
-Things that might not be obvious when writting Python.
+Things that might not be obvious when writing Python and other oddities.
+

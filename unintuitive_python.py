@@ -1,4 +1,5 @@
 # tested on Python 3.11
+from decimal import Decimal
 
 """
 Function parameters with mutable Defaults
@@ -48,10 +49,32 @@ Humans use a base-10 system - 10 fingers.
 print(0.1 + 0.2)  # 0.30000000000000004
 a = 0.1 + 0.2
 b = 0.3
-print(a is b) # False
-print(a == b) # False
+print(a is b)  # False
+print(a == b)  # False
 
 print(0.9 + 0.8)  # 1.7000000000000002
 
-from decimal import *
-print(Decimal(0.1) + Decimal(0.2)) #Decimal('0.3000000000000000166533453694')
+print(Decimal(0.1) + Decimal(0.2))  # Decimal('0.3000000000000000166533453694')
+
+"""
+Execute code from key word argument types and function type hints
+"""
+
+
+def just_for_fun(
+    cursed: [
+        print("Hello darkness my old friend"),
+        (lyric := input("what is the next line of the lyrics?:")),
+    ]
+) -> print(f"...{lyric}"):
+    pass
+
+
+just_for_fun(cursed=0.3)
+print(lyric)
+
+"""
+Function as a list of instructions
+"""
+
+main = [print("line 1"), print("line 2")]
