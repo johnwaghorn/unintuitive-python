@@ -65,7 +65,7 @@ def just_for_fun(
     cursed: [
         print("Hello darkness my old friend"),
         (lyric := input("what is the next line of the lyrics?:")),
-    ]
+    ],
 ) -> print(f"...{lyric}"):
     pass
 
@@ -78,3 +78,12 @@ Function as a list of instructions
 """
 
 main = [print("line 1"), print("line 2")]
+
+"""
+Dictionary where keys are not unique.
+
+The last value assigned to a key is the one that is used.
+"""
+
+d = {"a": 1, "b": 2, "a": 3}  # noqa
+print(d.get("a"))  # a is 3
